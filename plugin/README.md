@@ -4,9 +4,11 @@
 
 SsgWebpackPlugin is an unopinionated static-site-generation plugin for [Webpack](https://webpack.js.org/).
 
+It crawls inside the directory you speficify, compiles to Node.js the modules it finds there, hands them to your `render` function that generates an HTML string out of it and emits the resulting assets. And all of that happens at build time.
+
 Why it's awesome:
 
-- It enables you to have [Next.js](https://nextjs.org/)-like setup, where you have a pages directory that's automatically crawled;
+- It enables you to have a [Next.js](https://nextjs.org/)-like setup;
 - It integrates seamlessly into your [Babel](https://babeljs.io/) and [HtmlWebpackPlugin](https://www.npmjs.com/package/html-webpack-plugin) setup.
 
 ## Installation
@@ -23,30 +25,27 @@ With Yarn:
 yarn add ssg-webpack-plugin --dev --exact
 ```
 
+Note: we encourage you to install an exact version of the package. It's because, as stated in the [SemVer Specification](https://semver.org/spec/v2.0.0.html#spec-item-4), anything may change at any time during the initial development stage (v0.y.z).
+
 ## Usage
 
-### webpack.config.js
-
 ```js
+// webpack.config.js
+
 import path from "node:path";
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import SsgWebpackPlugin from "ssg-webpack-plugin";
+import React from "react";
 
 export default {
   // ...
   plugins: [
-    new HtmlWebpackPlugin({ filename: "index.html" }),
     new SsgWebpackPlugin({
-      documentAsset: "index.html",
-      entry: path.join("src", "components", "app.js"),
-      outBasePath: "posts",
-      pagesDirectory: path.join("src", "posts"),
-      render: (entryModule, pageModule, documentAsset) => {
-        const { default: App } = entryModule;
-        const { default: Page } = pageModule;
-        const root = app(page());
-        return documentAsset.replace("<!--:: APP ::-->", root);
+      entry: path.join("src", "_app.js"),
+      pagesDirectory: path.join("src", "pages"),
+      render: ({ default: App }, { default: Page }) => {
+        return makeHtml(App, Page);
       },
     }),
   ],
