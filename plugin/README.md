@@ -9,6 +9,7 @@ It crawls inside the directory you speficify, compiles to Node.js the modules it
 Why it's awesome:
 
 - It enables you to have a [Next.js](https://nextjs.org/)-like setup;
+- Use it to statically generate your whole application or just a part of it (e.g. the blog);
 - It integrates seamlessly into your [Babel](https://babeljs.io/) and [HtmlWebpackPlugin](https://www.npmjs.com/package/html-webpack-plugin) setup.
 
 ## Installation
