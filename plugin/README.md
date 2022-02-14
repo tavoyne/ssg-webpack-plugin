@@ -26,7 +26,7 @@ With Yarn:
 yarn add ssg-webpack-plugin --dev --exact
 ```
 
-Note: we encourage you to install an exact version of the package. It's because, as stated in the [SemVer Specification](https://semver.org/spec/v2.0.0.html#spec-item-4), anything may change at any time during the initial development stage (v0.y.z).
+We encourage you to install an exact version of the package. It's because, as stated in the [SemVer Specification](https://semver.org/spec/v2.0.0.html#spec-item-4), anything may change at any time during the initial development stage.
 
 ## Usage
 
