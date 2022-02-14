@@ -1,15 +1,18 @@
 # SsgWebpackPlugin
 
-:warning: This package is at its initial development stage. It should not be considered stable.
+:warning: This package is at an initial development stage. It should not be considered stable.
 
 SsgWebpackPlugin is an unopinionated static-site-generation plugin for [Webpack](https://webpack.js.org/).
 
-It crawls inside the directory you speficify, compiles to Node.js the modules it finds there, hands them to your `render` function that generates an HTML string out of it and emits the resulting assets. And all of that happens at build time.
+It _crawls_ your pages directory, evaluates the modules it finds there, hands them to the `render` function you provide and emits the resulting assets. All of that happening at build time.
 
 Why it's awesome:
 
-- It enables you to have a [Next.js](https://nextjs.org/)-like setup;
-- Use it to statically generate your whole application or just a part of it (e.g. the blog);
+- It's very intutive, especially if you're familiar with SSG or SSR;
+- It enables you to have a [Next.js](https://nextjs.org/)-like setup, but without sacrificing sovereignty over your codebase;
+- It integrates into any stack (from React, Vue.js to even Vanilla JavaScript);
+- It reuses your main compiler's loaders so any file format (e.g. `.mdx`, `.ts`, etc.) that's importable from there is importable from SsgWebpackPlugin's compiler;
+- It allows you to only generate the pages you want (e.g. the blog posts and not the account page) and won't get into your way if you're also doing SSR;
 - It integrates seamlessly into your [Babel](https://babeljs.io/) and [HtmlWebpackPlugin](https://www.npmjs.com/package/html-webpack-plugin) setup.
 
 ## Installation
