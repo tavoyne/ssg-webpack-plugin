@@ -3,7 +3,7 @@
     "email": "me@tavoyne.com",
     "name": "Théophile Avoyne"
   },
-  "description": "Unopinionated and lightweight static-site-generation plugin for Webpack.",
+  "description": "Unopinionated static-site-generation plugin for Webpack.",
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.2",
@@ -41,8 +41,10 @@
     "url": "https://github.com/tavoyne/ssg-webpack-plugin"
   },
   "scripts": {
+    "build": "webpack --env mode=production",
+    "dts": "tsc --declaration --emitDeclarationOnly --outDir ./lib",
     "postpack": "rm -rf LICENSE.md lib",
-    "prepack": "cp $PROJECT_CWD/LICENSE.md LICENSE.md && webpack --env mode=production && tsc --declaration --emitDeclarationOnly --outDir ./lib"
+    "prepack": "cp $PROJECT_CWD/LICENSE.md LICENSE.md && build && dts"
   },
   "type": "module",
   "types": "./lib/index.d.ts",
