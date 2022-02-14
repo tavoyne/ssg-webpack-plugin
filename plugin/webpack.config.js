@@ -17,9 +17,9 @@ export default ({ mode }) => {
     module: {
       rules: [
         {
-          exclude: /node_modules/u,
+          exclude: /\.yarn/u,
           loader: "babel-loader",
-          test: /\.tsx?$/u,
+          test: /\.ts?$/u,
         },
       ],
     },
