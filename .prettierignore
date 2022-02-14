@@ -1,0 +1,5 @@
+"**/lib/**/*"
+"**/public/**/*"
+/.pnp.cjs
+/.pnp.loader.mjs
+/.yarn/**/*

@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "public",
+    "redirects": [
+      {
+        "destination": "/posts/post-1",
+        "source": "/",
+        "type": 301
+      }
+    ],
+    "target": "vanilla",
+    "trailingSlash": false
+  }
+}

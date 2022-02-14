@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ssg-webpack-plugin"
+  },
+  "targets": {
+    "ssg-webpack-plugin": {
+      "hosting": {
+        "vanilla": [
+          "ssg-webpack-plugin-vanilla"
+        ]
+      }
+    }
+  }
+}

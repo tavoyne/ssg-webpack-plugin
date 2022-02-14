@@ -1,0 +1,58 @@
+# This file follows a whitelist approach.
+# In order for files to be tracked, they must be targeted explicitly.
+
+# Ignore everything
+*
+
+# Files tracked everywhere
+!.eslintrc.cjs
+!.gitignore
+
+# Root
+!/.prettierignore
+!/.yarnrc.yml
+!/LICENSE.md
+!/README.md
+!/package.json
+!/yarn.lock
+
+# Examples
+!/examples
+!/examples/README.md
+!/examples/vanilla
+!/examples/vanilla/.browserslistrc
+!/examples/vanilla/.firebaserc
+!/examples/vanilla/README.md
+!/examples/vanilla/babel.config.json
+!/examples/vanilla/firebase.json
+!/examples/vanilla/package.json
+!/examples/vanilla/src
+!/examples/vanilla/src/components
+!/examples/vanilla/src/components/*.js
+!/examples/vanilla/src/index.js
+!/examples/vanilla/src/posts
+!/examples/vanilla/src/posts/*.js
+!/examples/vanilla/template.html
+!/examples/vanilla/webpack.config.js
+
+# Plugin
+!/plugin
+!/plugin/README.md
+!/plugin/.browserslistrc
+!/plugin/babel.config.json
+!/plugin/index.ts
+!/plugin/package.json
+!/plugin/tsconfig.json
+!/plugin/webpack.config.js
+
+# VSCode
+!/.vscode
+!/.vscode/extensions.json
+!/.vscode/settings.json
+
+# Yarn
+!/.yarn
+!/.yarn/releases
+!/.yarn/releases/**/*
+!/.yarn/sdks
+!/.yarn/sdks/**/*
