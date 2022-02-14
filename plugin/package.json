@@ -44,9 +44,9 @@
     "build": "webpack --env mode=production",
     "dts": "tsc --declaration --emitDeclarationOnly --outDir ./lib",
     "postpack": "rm -rf LICENSE.md lib",
-    "prepack": "cp $PROJECT_CWD/LICENSE.md LICENSE.md && build && dts"
+    "prepack": "cp $PROJECT_CWD/LICENSE.md LICENSE.md && run build && run dts"
   },
   "type": "module",
   "types": "./lib/index.d.ts",
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
